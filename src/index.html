@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="shortcut icon"
+      href="images/Chinazaekpere Uchenna_prev_ui.png"
+      type="image/x-icon"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link href="/dist/output.css" rel="stylesheet" />
+    <style>
+      #hero-section::before,
+      #contact-section::before {
+        content: "";
+        background-image: url(images/bg-intro-desktop.png);
+        background-size: cover;
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+        z-index: -1;
+      }
+
+      #Nav-lists li::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 3px;
+        margin-top: 0px;
+        background: #2067cd;
+        transition: 0.5s;
+      }
+
+      #Nav-lists li:hover::before,
+      #Nav-lists li:focus::before {
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+      }
+    </style>
+    <title>Chinazaekpere Uchenna</title>
+  </head>
+  <body class="font-barlow">
+    <!-- Navigation Menu -->
+    <section
+      id="navigations"
+      class="flex justify-between items-center py-6 pl-12 pr-0 border-b-2 tracking-wide"
+    >
+      <div id="logo" class="text-primary font-semibold">
+        chinazaekpereUCHENNA
+      </div>
+      <ul
+        id="Nav-lists"
+        class="lg:flex lg:justify-end lg:items-center lg:space-x-20 lg:mr-20 mr-0 justify-center lg:z-10 z-50 absolute lg:relative lg:bg-white bg-secondary-100 lg:h-0 h-full lg:w-0 w-[250px] top-0 lg:top-full right-0 text-left lg:pl-0 pl-7 lg:pt-0 pt-20 lg:space-y-0 space-y-6 hidden"
+      >
+        <li class="font-semibold transition hover:text-primary relative">
+          <a href="#hero-section">Home</a>
+        </li>
+        <li class="font-semibold transition hover:text-primary relative">
+          <a href="#services-section">Services</a>
+        </li>
+        <li class="font-semibold transition hover:text-primary relative">
+          <a href="#portfolio-section">Portfolio</a>
+        </li>
+        <li class="font-semibold transition hover:text-primary relative">
+          <a href="#blog-section">Blog</a>
+        </li>
+        <li class="font-semibold transition hover:text-primary relative">
+          <a href="#contact-section">Contact</a>
+        </li>
+      </ul>
+      <i
+        id="menu"
+        class="fa-solid fa-bars lg:hidden block cursor-pointer text-primary text-xl mr-10 z-50"
+        onclick="showMenu()"
+      ></i>
+      <i
+        id="close"
+        class="fa-solid fa-xmark lg:hidden cursor-pointer text-primary text-xl mr-10 z-50 hidden"
+        onclick="hideMenu()"
+      ></i>
+    </section>
+    <!-- Hero Section -->
+    <section
+      id="hero-section"
+      class="flex lg:flex-row flex-col items-center relative pt-10 mx-16 my-0"
+    >
+      <div
+        id="hero-info"
+        class="font-bold lg:mt-6 mt-12 lg:ml-5 leading-normal lg:w-[65%] tracking-wide"
+      >
+        <h1 class="lg:text-4xl text-2xl lg:mb-2 mb-1">
+          Hey, I'm Chinazaekpere Uchenna.
+        </h1>
+        <h3 class="lg:text-3xl mb-10 text-xl">
+          And I'm a <span class="text-primary">Frontend Developer.</span>
+        </h3>
+        <p
+          id="about"
+          class="lg:text-justify font-medium text-gray-900 lg:w-[75%] w-[85%]"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio magni
+          obcaecati sequi! Itaque quibusdam laborum vel non earum consequuntur
+          voluptates numquam quia, dolorem quasi vitae ullam facilis explicabo
+          eaque eveniet at corporis rem? Facere a esse quam repellat hic,
+          cupiditate totam beatae aliquam fuga vel.
+        </p>
+        <button
+          class="text-black bg-white font-medium relative mt-14 tracking-widest py-3 px-10 border-gray-800 border-2 border-solid text-lg uppercase z-10 btn-hover"
+        >
+          Contact Me
+        </button>
+      </div>
+      <div class="lg:w-[450px] w-[240px] ml-16 lg:ml-0 lg:mt-0 mt-7">
+        <img
+          id="hero-img"
+          src="images/Chinazaekpere Uchenna_prev_ui.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section
+      id="services-section"
+      class="bg-secondary-200 text-center p-9 text-primary"
+    >
+      <h1 class="lg:text-4xl text-3xl font-bold lg:mb-12 mb-10">Services</h1>
+      <div class="flex flex-col justify-center items-center -mt-10">
+        <div class="py-1 w-24 items-center flex bg-[#4cb1e2]"></div>
+      </div>
+      <div
+        id="services"
+        class="flex lg:flex-row flex-col justify-around items-center my-12 mx-14 space-y-10 lg:space-y-0"
+      >
+        <div
+          id="service-card"
+          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary transition cursor-pointer hover:shadow-primary hover:transition"
+        >
+          <i class="fa-solid fa-pen-nib my-2 mx-0 text-5xl"></i>
+          <span id="service-title" class="font-semibold my-4 mx-0 text-[32px]"
+            >Web Design</span
+          >
+          <span
+            class="service-text font-semibold text-black leading-normal my-0 lg:mx-4 mx-2"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            laboriosam aperiam minus libero animi tempora laudantium vitae, ut
+            amet minima!
+          </span>
+          <div>
+            <i
+              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              id="next-btn"
+            ></i>
+          </div>
+        </div>
+        <div
+          id="service-card"
+          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
+        >
+          <i class="fa-regular fa-pen-to-square my-2 mx-0 text-5xl"></i>
+          <span id="service-title" class="font-semibold my-4 mx-0 text-[32px]"
+            >Technical Writing</span
+          >
+          <span
+            class="service-text font-semibold text-black leading-normal my-0 lg:mx-4 mx-2"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            laboriosam aperiam minus libero animi tempora laudantium vitae, ut
+            amet minima!
+          </span>
+          <div>
+            <i
+              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              id="next-btn"
+            ></i>
+          </div>
+        </div>
+        <div
+          id="service-card"
+          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
+        >
+          <i class="fa-solid fa-code my-2 mx-0 text-5xl"></i>
+          <span
+            id="service-title"
+            class="font-semibold my-4 mx-0 text-[32px] lg:leading-normal leading-tight"
+            >Web Development</span
+          >
+          <span
+            class="service-text font-semibold text-black leading-normal my-0 lg:mx-4 mx-2"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+            laboriosam aperiam minus libero animi tempora laudantium vitae, ut
+            amet minima!
+          </span>
+          <div>
+            <i
+              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              id="next-btn"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section
+      id="portfolio-section"
+      class="bg-white text-center p-9 text-primary relative"
+    >
+      <h1 class="text-4xl font-bold mb-12">Portfolio</h1>
+      <div class="flex flex-col justify-center items-center -mt-10">
+        <div class="py-1 w-24 items-center flex bg-[#4cb1e2]"></div>
+      </div>
+      <div class="flex justify-around my-12 mx-6">
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/web3.jpg"
+            alt="web 3 news site"
+            class="h-full rounded-xl block w-full"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/learnToCode.jpg"
+            alt="Learn To Code"
+            class="h-full rounded-xl"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/newletter.jpg"
+            alt="Newsletter Subscription"
+            class="h-full rounded-xl"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/web3.jpg"
+            alt="web 3 news site"
+            class="h-full rounded-xl block w-full"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/learnToCode.jpg"
+            alt="Learn To Code"
+            class="h-full rounded-xl"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+        <div
+          id="portfolio-card"
+          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+        >
+          <img
+            src="images/newletter.jpg"
+            alt="Newsletter Subscription"
+            class="h-full rounded-xl"
+          />
+          <div
+            id="overlay"
+            class="bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl"
+          >
+            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
+            <span class="w-3/4 cursor-default"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
+              assumenda impedit quae eos adipisci, id autem.</span
+            >
+            <button
+              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:text-primary before:bg-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl"
+            >
+              View Live Site
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Blog -->
+    <section id="blog-section" class="bg-white text-center p-9 text-primary">
+      <h1 class="text-4xl font-bold mb-12">My Blog</h1>
+      <div class="flex flex-col justify-center items-center -mt-10">
+        <div class="py-1 w-24 items-center flex bg-[#4cb1e2]"></div>
+      </div>
+      <div
+        id="blog"
+        class="flex lg:flex-row md:flex-row md:items-center flex-col justify-between items-center my-4 lg:mt-10 mt-10 lg:mx-24"
+      >
+        <div
+          class="flex flex-col lg:items-start items-center tracking-wide text-center"
+        >
+          <h1 class="text-black font-bold lg:text-4xl text-2xl">
+            Visit My Blog
+          </h1>
+          <span class="text-black font-medium lg:text-lg text-xs"
+            >To see some of my articles</span
+          >
+        </div>
+        <button
+          class="text-black bg-white font-medium tracking-wide lg:py-3 py-2 lg:px-10 px-6 border-gray-800 border-2 border-solid text-lg z-10 btn-hover relative lg:mt-0 md:mt-0 mt-10"
+        >
+          <a href="https://chinazaekpere.hashnode.dev/" target="_blank">
+            Visit Blog
+          </a>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact-section"
+      class="bg-primary text-center p-9 text-white flex flex-col justify-center items-center relative my-0"
+    >
+      <h1 class="text-4xl font-bold mb-12">Contact Us</h1>
+      <div class="flex flex-col justify-center items-center -mt-10">
+        <div class="py-1 w-24 items-center flex bg-[#4cb1e2]"></div>
+      </div>
+      <p class="my-8 italic tracking-wide text-xl">
+        Say Hello, Let's discuss how to give your brand an online presence
+      </p>
+      <div
+        class="flex flex-col lg:w-2/5 w-4/5 justify-center items-center text-black"
+      >
+        <input
+          type="email"
+          class="p-3 w-full rounded-md my-3 placeholder:italic outline-none"
+          placeholder="Email"
+        />
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="p-3 w-full rounded-md placeholder:italic outline-none"
+          placeholder="Type in your message here....."
+        ></textarea>
+        <button
+          class="my-4 p-4 py-3 rounded-md text-lg font-semibold w-full tracking-wide hover:bg-secondary-100 hover:text-black bg-[#4cb1e2] text-white"
+        >
+          Send Message
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-100">
+      <ul
+        id="Nav-lists"
+        class="flex justify-around pt-16 pb-14 lg:px-96 md:px-40 px-8"
+      >
+        <li class="font-bold">
+          <a href="#hero-section">Home</a>
+        </li>
+        <li class="font-bold">
+          <a href="#services-section">Services</a>
+        </li>
+        <li class="font-bold">
+          <a href="#portfolio-section">Portfolio</a>
+        </li>
+        <li class="font-bold">
+          <a href="#blog-section">Blog</a>
+        </li>
+        <li class="font-bold">
+          <a href="#contact-section">Contact</a>
+        </li>
+      </ul>
+      <div
+        id="sm-icons"
+        class="flex justify-center text-center text-2xl text-primary lg:pb-12 pb-8 lg:space-x-16 space-x-8"
+      >
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <div
+          class="w-[85%] items-center flex border-solid border-b-2 border-gray-400 lg:my-6 my-3"
+        ></div>
+      </div>
+      <div
+        class="flex justify-between lg:mx-28 md:mx-16 mx-8 py-7 font-medium lg:text-sm md:text-xs text-[10px]"
+      >
+        <span>&copy; 2023. All Rights Reserved.</span>
+        <span
+          >Designed by
+          <a
+            href="https://github.com/overdose-dev"
+            class="hover:text-primary hover:underline"
+            >Chinazaekpere Uchenna</a
+          ></span
+        >
+      </div>
+    </footer>
+
+    <script>
+      var navLinks = document.getElementById("Nav-lists");
+      var open = document.getElementById("menu");
+      var close = document.getElementById("close");
+
+      function showMenu() {
+        navLinks.style.display = "block";
+        open.style.display = "none";
+        close.style.display = "block";
+      }
+
+      function hideMenu() {
+        navLinks.style.display = "none";
+        open.style.display = "block";
+        close.style.display = "none";
+      }
+
+      window.addEventListener("click", function (e) {
+        if (e.target === navLinks) {
+          navLinks.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

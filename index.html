@@ -46,6 +46,12 @@
       textarea {
         resize: none;
       }
+
+      #service-card:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+        cursor: default;
+        transition: 500ms ease-in-out;
+      }
     </style>
     <title>Chinazaekpere Uchenna</title>
   </head>
@@ -144,9 +150,9 @@
       >
         <div
           id="service-card"
-          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary transition cursor-pointer hover:shadow-primary hover:transition"
+          class="bg-white flex flex-col w-[350px] lg:py-4 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
         >
-          <i class="fa-solid fa-pen-nib my-2 mx-0 text-5xl"></i>
+          <i class="fa-solid fa-pen-nib mx-0 text-5xl mt-6"></i>
           <span id="service-title" class="font-semibold my-4 mx-0 text-[32px]"
             >Web Design</span
           >
@@ -159,16 +165,16 @@
           </span>
           <div>
             <i
-              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              class="fa-solid fa-right-long text-center text-4xl text-white cursor-pointer bg-primary p-2 px-3 mt-7 rounded-[50%] z-50"
               id="next-btn"
             ></i>
           </div>
         </div>
         <div
           id="service-card"
-          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
+          class="bg-white flex flex-col w-[350px] lg:py-4 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
         >
-          <i class="fa-regular fa-pen-to-square my-2 mx-0 text-5xl"></i>
+          <i class="fa-regular fa-pen-to-square mx-0 text-5xl mt-6"></i>
           <span id="service-title" class="font-semibold my-4 mx-0 text-[32px]"
             >Technical Writing</span
           >
@@ -181,16 +187,16 @@
           </span>
           <div>
             <i
-              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              class="fa-solid fa-right-long text-center text-4xl text-white cursor-pointer bg-primary p-2 px-3 mt-7 rounded-[50%] z-50"
               id="next-btn"
             ></i>
           </div>
         </div>
         <div
           id="service-card"
-          class="bg-white flex flex-col w-[350px] lg:py-12 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
+          class="bg-white flex flex-col w-[350px] lg:py-4 py-8 px-4 rounded-3xl border-2 border-solid border-primary text-primary"
         >
-          <i class="fa-solid fa-code my-2 mx-0 text-5xl"></i>
+          <i class="fa-solid fa-code mx-0 text-5xl mt-6"></i>
           <span
             id="service-title"
             class="font-semibold my-4 mx-0 text-[32px] lg:leading-normal leading-tight"
@@ -205,7 +211,7 @@
           </span>
           <div>
             <i
-              class="fa-solid fa-right-long text-center p-2 text-white cursor-pointer bg-primary w-[22%] rounded-full z-50"
+              class="fa-solid fa-right-long text-center text-4xl text-white cursor-pointer bg-primary p-2 px-3 mt-7 rounded-[50%] z-50"
               id="next-btn"
             ></i>
           </div>
@@ -472,14 +478,16 @@
       </ul>
       <div
         id="sm-icons"
-        class="flex justify-center text-center text-2xl text-primary lg:pb-12 pb-8 lg:space-x-16 space-x-8"
+        class="flex justify-center items-center text-center text-2xl text-primary lg:pb-12 pb-8 lg:space-x-16 space-x-8"
       >
         <i class="fa-solid fa-phone"></i>
         <i class="fa-brands fa-whatsapp"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-github cursor-pointer">
-          <a href="https://github.com/overdose-dev/"></a>
-        </i>
+        <a href="https://twitter.com/UDChinazaekpere" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://github.com/overdose-dev/" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
       </div>
       <div class="flex flex-col justify-center items-center">
         <div

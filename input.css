@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn-white {
+  @apply text-black bg-white font-medium border-gray-800 border-2 border-solid text-lg z-10 before:bg-primary before:text-white hover:text-white relative;
+}
+
 .btn-hover {
-  @apply before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:bg-primary before:text-white before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:text-white hover:border-0 hover:transition hover:shadow-xl;
+  @apply before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:right-0 before:border-none before:-z-10 before:transition before:duration-300 before:ease-in-out before:origin-left before:scale-x-0 overflow-hidden hover:before:scale-x-100 hover:focus:scale-x-100 hover:border-0 hover:transition hover:shadow-xl;
+}
+
+.portfolio-overlay {
+  @apply bg-primary text-white absolute top-0 left-0 w-full h-full flex items-center justify-center text-center flex-col opacity-0 bg-opacity-90 border-2 transition-opacity duration-300 hover:opacity-100 rounded-xl;
 }

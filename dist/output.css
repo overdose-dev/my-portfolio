@@ -757,6 +757,10 @@ video {
   margin-top: -2.5rem;
 }
 
+.-mt-12{
+  margin-top: -3rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -2184,6 +2188,10 @@ video {
   padding-right: 0px;
 }
 
+.pr-6{
+  padding-right: 1.5rem;
+}
+
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -2194,6 +2202,10 @@ video {
 
 .pt-20{
   padding-top: 5rem;
+}
+
+.pr-3{
+  padding-right: 0.75rem;
 }
 
 .text-left{
@@ -2726,6 +2738,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-300{
+  transition-duration: 300ms;
+}
+
 .ease-in{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -2902,6 +2918,12 @@ video {
   color: rgb(32 103 205 / var(--tw-text-opacity));
 }
 
+.hover\:scale-105:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-secondary-100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(205 218 235 / var(--tw-bg-opacity));
@@ -2974,6 +2996,10 @@ video {
   .md\:px-40{
     padding-left: 10rem;
     padding-right: 10rem;
+  }
+
+  .md\:pr-6{
+    padding-right: 1.5rem;
   }
 
   .md\:text-xs{
@@ -3140,6 +3166,10 @@ video {
 
   .lg\:pl-0{
     padding-left: 0px;
+  }
+
+  .lg\:pr-10{
+    padding-right: 2.5rem;
   }
 
   .lg\:pt-0{

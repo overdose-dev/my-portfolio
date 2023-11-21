@@ -52,6 +52,18 @@
         cursor: default;
         transition: 500ms ease-in-out;
       }
+
+      @media (max-width: 1024px) {
+        #Nav-lists li:hover::before,
+        #Nav-lists li:focus::before {
+          width: 0;
+        }
+
+        #Nav-lists li {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
     </style>
     <title>Chinazaekpere Uchenna</title>
   </head>
@@ -109,7 +121,7 @@
           Hey, I'm Chinazaekpere Uchenna.
         </h1>
         <h3 class="lg:text-3xl mb-10 text-xl">
-          And I'm a <span class="text-primary">Frontend Developer.</span>
+          And I'm a <span class="text-primary myRoles"></span>
         </h3>
         <p
           id="about"
@@ -515,11 +527,29 @@
         close.style.display = "none";
       }
 
+      navLinks.addEventListener("click", function () {
+        navLinks.style.display = "none";
+        close.style.display = "none";
+        open.style.display = "block";
+      });
+
       window.addEventListener("click", function (e) {
         if (e.target === navLinks) {
           navLinks.style.display = "none";
         }
       });
+
+      // Typed JS
+      const typed = new Typed(".myRoles", {
+        strings: ["Frontend Developer.", "Technical Writer."],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+      });
     </script>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </body>
 </html>

@@ -12,10 +12,14 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="./dist/output.css" rel="stylesheet" />
     <style>
       #hero-section::before,
@@ -54,6 +58,42 @@
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
         cursor: default;
         transition: 500ms ease-in-out;
+      }
+
+      .swiper {
+        height: calc(100% - 4rem);
+      }
+
+      .swiper-slide > img {
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .pagination_ {
+        width: calc(100% - 10%);
+        color: #2067cd;
+      }
+
+      .pagination_ div[class*="swiper-button"]::after {
+        display: none;
+      }
+
+      .pagination_ div[class*="swiper-button"] {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pagination_ div[class*="swiper-button"] img {
+        width: 95%;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 20px;
+        border-radius: 4px;
+        background: #4cb1e2;
       }
 
       @media (max-width: 1024px) {
@@ -244,143 +284,162 @@
       <div class="flex flex-col justify-center items-center -mt-10">
         <div class="py-1 w-24 items-center flex bg-[#4cb1e2]"></div>
       </div>
-      <div class="flex justify-around my-12 mx-6">
+
+      <!-- Swiper Section -->
+      <div class="w-full h-[50vh] flex justify-center items-center">
+        <!-- Swiper main container -->
         <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
+          class="swiper flex justify-center items-center overflow-hidden mt-14 w-10/12 mx-auto"
         >
-          <img
-            src="images/web3.jpg"
-            alt="web 3 news site"
-            class="h-full rounded-xl block w-full"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
+          <!-- Additional Required Wrapper -->
+          <div class="swiper-wrapper flex my-12 mx-6">
+            <!-- Slides -->
+            <div
+              id="portfolio-card"
+              class="swiper-slide rounded-lg overflow-hidden"
             >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
-            >
-              View Live Site
-            </button>
+              <img
+                src="images/web3.jpg"
+                alt="web 3 news site"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden">
+              <img
+                src="images/learnToCode.jpg"
+                alt="Learn To Code"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden">
+              <img
+                src="images/newletter.jpg"
+                alt="Newsletter Subscription"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden">
+              <img
+                src="images/web3.jpg"
+                alt="web 3 news site"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden">
+              <img
+                src="images/learnToCode.jpg"
+                alt="Learn To Code"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-lg overflow-hidden">
+              <img
+                src="images/newletter.jpg"
+                alt="Newsletter Subscription"
+                class="h-full rounded-xl block w-full"
+              />
+              <div id="overlay" class="portfolio-overlay">
+                <span class="text-3xl font-bold mb-4 tracking-wide"
+                  >Quiz Game</span
+                >
+                <span class="w-3/4 cursor-default"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Illum quam accusamus aliquid eum ipsa ullam veritatis dolor.
+                  Soluta assumenda impedit quae eos adipisci, id autem.</span
+                >
+                <button
+                  class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
+                >
+                  View Live Site
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
-        >
-          <img
-            src="images/learnToCode.jpg"
-            alt="Learn To Code"
-            class="h-full rounded-xl"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
-            >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
-            >
-              View Live Site
-            </button>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <div class="pagination_ absolute">
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <img src="/images/chevron-left-regular-24.png" alt="" />
           </div>
-        </div>
-        <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
-        >
-          <img
-            src="images/newletter.jpg"
-            alt="Newsletter Subscription"
-            class="h-full rounded-xl"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
-            >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
-            >
-              View Live Site
-            </button>
-          </div>
-        </div>
-        <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
-        >
-          <img
-            src="images/web3.jpg"
-            alt="web 3 news site"
-            class="h-full rounded-xl block w-full"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
-            >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
-            >
-              View Live Site
-            </button>
-          </div>
-        </div>
-        <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
-        >
-          <img
-            src="images/learnToCode.jpg"
-            alt="Learn To Code"
-            class="h-full rounded-xl"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
-            >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:text-primary before:bg-white btn-hover"
-            >
-              View Live Site
-            </button>
-          </div>
-        </div>
-        <div
-          id="portfolio-card"
-          class="flex justify-center items-center w-[430px] rounded-xl text-primary shadow-lg text-center mx-auto border-2 border-solid border-gray-100 relative"
-        >
-          <img
-            src="images/newletter.jpg"
-            alt="Newsletter Subscription"
-            class="h-full rounded-xl"
-          />
-          <div id="overlay" class="portfolio-overlay">
-            <span class="text-3xl font-bold mb-4 tracking-wide">Quiz Game</span>
-            <span class="w-3/4 cursor-default"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              quam accusamus aliquid eum ipsa ullam veritatis dolor. Soluta
-              assumenda impedit quae eos adipisci, id autem.</span
-            >
-            <button
-              class="relative bg-none outline outline-white-500 px-8 mt-6 py-2 z-10 hover:font-semibold hover:text-primary before:bg-white before:text-primary btn-hover"
-            >
-              View Live Site
-            </button>
+          <div class="swiper-button-next">
+            <img src="/images/chevron-right-regular-24.png" alt="" />
           </div>
         </div>
       </div>
@@ -549,6 +608,40 @@
         backSpeed: 100,
         backDelay: 3000,
         loop: true,
+      });
+
+      // Swiper JS
+      const swiper = new Swiper(".swiper", {
+        speed: 400,
+        spaceBetween: 20,
+        slidesPerView: 3,
+
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        mousewheel: true,
       });
     </script>
   </body>

@@ -10,11 +10,18 @@
     /> -->
     <!-- Typed JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Swiper CSS/JS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -48,6 +55,11 @@
       #Nav-lists li:hover::before,
       #Nav-lists li:focus::before {
         width: 100%;
+      }
+
+      footer #Nav-lists li:hover::before,
+      footer #Nav-lists li:focus::before {
+        width: 0;
       }
 
       textarea {
@@ -622,6 +634,18 @@
           navLinks.style.display = "none";
         }
       });
+
+      // Scroll Reveal
+      ScrollReveal({
+        distance: "80px",
+        duration: 2000,
+        delay: 200,
+      });
+
+      ScrollReveal().reveal("section > h1, section > div", { origin: "top" });
+      ScrollReveal().reveal("#service-card", { origin: "left" });
+      ScrollReveal().reveal("#hero-img", { origin: "right" });
+      ScrollReveal().reveal("#Nav-lists", { origin: "right" });
 
       // Typed JS
       const typed = new Typed(".myRoles", {

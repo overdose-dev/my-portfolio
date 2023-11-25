@@ -813,6 +813,14 @@ video {
   margin-top: 1.75rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -3062,6 +3070,10 @@ video {
     margin-top: 1.5rem;
   }
 
+  .lg\:mb-4{
+    margin-bottom: 1rem;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -3090,8 +3102,8 @@ video {
     width: 65%;
   }
 
-  .lg\:w-\[75\%\]{
-    width: 75%;
+  .lg\:w-\[85\%\]{
+    width: 85%;
   }
 
   .lg\:flex-row{

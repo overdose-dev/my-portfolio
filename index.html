@@ -26,7 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="./dist/output.css" rel="stylesheet" />
     <style>
       #hero-section::before,
@@ -120,12 +120,6 @@
         }
       }
 
-      @media (min-width: 1025px) {
-        li > a {
-          font-size: 20px;
-        }
-      }
-
       @media (max-width: 424px) {
         #overlay button {
           padding: 5px 15px;
@@ -187,7 +181,7 @@
     <!-- Hero Section -->
     <section
       id="hero-section"
-      class="flex lg:flex-row flex-col items-center relative pt-10 mx-16 my-0"
+      class="flex lg:flex-row flex-col items-center relative pt-10 mx-24 my-0"
     >
       <div
         id="hero-info"
@@ -522,29 +516,45 @@
       <p class="my-8 italic tracking-wide text-xl">
         Say Hello, Let's discuss how to give your brand an online presence
       </p>
-      <div
+      <form
+        action="#"
         class="flex flex-col lg:w-2/5 w-4/5 justify-center items-center text-black"
       >
-        <input
-          type="email"
-          class="p-3 w-full rounded-md my-3 placeholder:italic outline-none"
-          placeholder="Email"
-          required
-        />
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          class="p-3 w-full rounded-md placeholder:italic outline-none"
-          placeholder="Type in your message here....."
-        ></textarea>
+        <div class="w-full field">
+          <input
+            type="email"
+            class="p-3 w-full rounded-md my-3 placeholder:italic outline-none item"
+            placeholder="Email"
+            required
+          />
+          <div
+            class="error-txt tracking-wide text-left text-[#e76f66] font-medium -mt-2 hidden mb-3 italic"
+          >
+            Email can't be blank
+          </div>
+        </div>
+        <div class="w-full field">
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="p-3 w-full rounded-md placeholder:italic outline-none item"
+            placeholder="Type in your message here....."
+            required
+          ></textarea>
+          <div
+            class="error-txt tracking-wide text-left text-[#e76f66] font-medium italic hidden"
+          >
+            Message can't be blank
+          </div>
+        </div>
         <button
           class="my-4 p-4 py-3 rounded-md text-lg font-semibold w-full tracking-wide hover:bg-secondary-100 hover:text-black bg-[#4cb1e2] text-white"
         >
           Send Message
         </button>
-      </div>
+      </form>
     </section>
 
     <!-- Footer -->
@@ -608,89 +618,7 @@
       ></a>
     </footer>
 
-    <script>
-      var navLinks = document.getElementById("Nav-lists");
-      var open = document.getElementById("menu");
-      var close = document.getElementById("close");
-
-      function showMenu() {
-        navLinks.style.display = "block";
-        open.style.display = "none";
-        close.style.display = "block";
-      }
-
-      function hideMenu() {
-        navLinks.style.display = "none";
-        open.style.display = "block";
-        close.style.display = "none";
-      }
-
-      navLinks.addEventListener("click", function () {
-        navLinks.style.display = "none";
-        close.style.display = "none";
-        open.style.display = "block";
-      });
-
-      window.addEventListener("click", function (e) {
-        if (e.target === navLinks) {
-          navLinks.style.display = "none";
-        }
-      });
-
-      // Scroll Reveal
-      ScrollReveal({
-        distance: "80px",
-        duration: 2000,
-        delay: 200,
-      });
-
-      ScrollReveal().reveal("section > h1, section > div", { origin: "top" });
-      ScrollReveal().reveal("#service-card", { origin: "left" });
-      ScrollReveal().reveal("#hero-img", { origin: "right" });
-      ScrollReveal().reveal("#Nav-lists", { origin: "right" });
-
-      // Typed JS
-      const typed = new Typed(".myRoles", {
-        strings: ["Frontend Developer.", "Technical Writer."],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 3000,
-        loop: true,
-      });
-
-      // Swiper JS
-      const swiper = new Swiper(".swiper", {
-        speed: 400,
-        spaceBetween: 20,
-        slidesPerView: 3,
-
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-        },
-
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-          clickable: true,
-        },
-
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        mousewheel: true,
-      });
-    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

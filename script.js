@@ -89,9 +89,7 @@ const swiper = new Swiper(".swiper", {
 const form = document.querySelector("form");
 const fullname = document.getElementById("name-input");
 const email = document.getElementById("email-input");
-const emailError = document.getElementById("email-error");
 const message = document.getElementById("message-input");
-const messageError = document.getElementById("message-error");
 const error = document.querySelector(".error-txt");
 const error2 = document.querySelectorAll(".error");
 
@@ -99,9 +97,7 @@ function sendEmail() {
   const bodyMessage = `Fullname: ${fullname.value} <br /> Email: ${email.value} <br /> <br /> ${message.value} `;
 
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "chinazauchenna@gmail.com",
-    Password: "74028B7BADC75829FCB24BC28A1039052B47",
+    SecureToken: "4223526c-de67-4c79-abcb-a31fbd5a4269",
     To: "chinazauchenna@gmail.com",
     From: "chinazauchenna@gmail.com",
     Subject: "Hello there, Chinazaekpere!",
@@ -124,9 +120,6 @@ function confirmInputs() {
     if (item.value == "") {
       item.classList.add("error");
       item.parentElement.classList.add("error");
-      // fullname.style.border = "2px solid red";
-      // email.style.border = "2px solid red";
-      // message.style.border = "2px solid red";
     }
 
     if (items[1].value != "") {
@@ -141,15 +134,9 @@ function confirmInputs() {
       if (item.value != "") {
         item.classList.remove("error");
         item.parentElement.classList.remove("error");
-        // fullname.style.border = "none";
-        // email.style.border = "none";
-        // message.style.border = "none";
       } else {
         item.classList.add("error");
         item.parentElement.classList.add("error");
-        // fullname.style.border = "2px solid red";
-        // email.style.border = "2px solid red";
-        // message.style.border = "2px solid red";
       }
     });
   }

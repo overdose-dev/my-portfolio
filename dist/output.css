@@ -645,6 +645,10 @@ video {
   right: 0px;
 }
 
+.start-1{
+  inset-inline-start: 0.25rem;
+}
+
 .top-0{
   top: 0px;
 }
@@ -691,6 +695,10 @@ video {
 
 .clear-none{
   clear: none;
+}
+
+.m-1{
+  margin: 0.25rem;
 }
 
 .mx-0{
@@ -751,6 +759,11 @@ video {
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-12{
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .-mt-10{
@@ -920,8 +933,20 @@ video {
   display: list-item;
 }
 
+.\!hidden{
+  display: none !important;
+}
+
 .hidden{
   display: none;
+}
+
+.h-1{
+  height: 0.25rem;
+}
+
+.h-2{
+  height: 0.5rem;
 }
 
 .h-\[50vh\]{
@@ -930,6 +955,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.w-1{
+  width: 0.25rem;
 }
 
 .w-10\/12{
@@ -966,6 +995,30 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[8\]{
+  width: 8;
+}
+
+.w-\[85\]{
+  width: 85;
+}
+
+.w-\[\%\]{
+  width: %;
+}
+
+.w-\[90\%\]{
+  width: 90%;
+}
+
+.w-\[9\%\]{
+  width: 9%;
 }
 
 .flex-shrink{
@@ -2112,6 +2165,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -2769,6 +2826,10 @@ video {
   content: var(--tw-content);
 }
 
+.\[a-zA-Z0-9\:\\\\-\\\\\._\$\]{
+  a-z-a--z0-9: \\-\\. $;
+}
+
 .btn-white{
   position: relative;
   z-index: 10;
@@ -3019,6 +3080,12 @@ video {
 }
 
 @media (min-width: 1024px){
+  @media (min-width: 768px){
+    .lg\:md\:w-\[65\%\]{
+      width: 65%;
+    }
+  }
+
   .lg\:relative{
     position: relative;
   }
